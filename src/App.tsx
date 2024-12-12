@@ -45,17 +45,19 @@ function App() {
 
     return (
         <div className="App">
-            Set Pixel Size:
-            <input
-                id="pixelSize"
-                type="number"
-                value={pixelSize}
-                onChange={handlePixelSizeChange}
-                // 可以设置最小和最大值，例如从1到50，避免过小或过大的值
-                min="1"
-                max="50"
-            />
-            <ImageUploader onPixelsReady={setPixels} pixelSize={pixelSize}/>
+            <div className="control">
+                Set Pixel Size:
+                <input
+                    id="pixelSize"
+                    type="number"
+                    value={pixelSize}
+                    onChange={handlePixelSizeChange}
+                    // 可以设置最小和最大值，例如从1到50，避免过小或过大的值
+                    min="1"
+                    max="50"
+                />
+                <ImageUploader onPixelsReady={setPixels} pixelSize={pixelSize}/>
+            </div>
             {pixels[0] && <PixelArt pixels={pixels} pixelSize={pixelSize}/>}
         </div>
     );
