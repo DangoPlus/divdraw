@@ -38,7 +38,7 @@ function App() {
     //    ['#00FFFF', '#FF00FF', '#C0C0C0'],
     //  ];
     const [pixels, setPixels] = useState<string[][]>([]);
-    const [pixelSize, setPixelSize] = useState<number>(0);
+    const [pixelSize, setPixelSize] = useState<number>(10);
     const handlePixelSizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setPixelSize(Number(event.target.value));
     };
