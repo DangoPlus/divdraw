@@ -1,0 +1,110 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.App {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* 通用input样式 */
+input[type="number"],
+input[type="file"] {
+  border-radius: 8px;
+  border: 1px solid #444;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  background-color: transparent;
+  color: inherit;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  box-shadow: none;
+}
+
+input[type="number"]:hover,
+input[type="file"]:hover {
+  border-color: #646cff;
+  box-shadow: 0 0 8px rgba(100, 108, 255, 0.5);
+}
+
+input[type="number"]:focus,
+input[type="number"]:focus-visible,
+input[type="file"]:focus,
+input[type="file"]:focus-visible {
+  border-color: #535bf2;
+  box-shadow: 0 0 8px rgba(83, 91, 242, 0.75);
+}
+
+/* 针对文件上传input的特殊样式 */
+input[type="file"] {
+  cursor: pointer; /* 更明确地指示这是一个可点击的项 */
+  background-color: #2e2e2e; /* 深色模式下的背景色, 略有区分 */
+  padding: 0.2em 0.6em;
+  width: 15em;
+}
+
+@media (prefers-color-scheme: light) {
+  input[type="number"],
+  input[type="file"] {
+    border-color: #ccc;
+    background-color: #ffffff;
+    color: #213547;
+  }
+  input[type="number"]:hover,
+  input[type="file"]:hover {
+    box-shadow: 0 0 8px rgba(116, 123, 255, 0.5);
+  }
+  input[type="number"]:focus,
+  input[type="number"]:focus-visible,
+  input[type="file"]:focus,
+  input[type="file"]:focus-visible {
+    box-shadow: 0 0 8px rgba(116, 123, 255, 0.75);
+  }
+
+  /* 浅色模式下文件上传input的特别区分 */
+  input[type="file"] {
+    background-color: #f0f0f0; /* 略为区分的浅色背景 */
+  }
+}
